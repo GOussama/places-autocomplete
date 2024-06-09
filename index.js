@@ -58,7 +58,7 @@ export default class PlacesAutocomplete {
 
         const url = `${this.autocompleteUrl}/${encodeURIComponent(query)}.json`;
         const urlParams = new URLSearchParams({
-          limit: options.limit || 6,
+          limit: options.limit || 8,
           language: options.language || navigator.language,
           country: options.country || 'ma',
           access_token: options.mapboxToken,
