@@ -75,7 +75,7 @@ export default class PlacesAutocomplete {
           urlParams.set('proximity', mapCenter.toArray().join(','));
         }
 
-        fetch(`${url}?${urlParams}`).then(response => response.json()).then(data => {
+        fetch(`${url}?${urlParams}&country=ma`).then(response => response.json()).then(data => {
           const results = data.features.map(result => {
             const nameParts = result.place_name.split(',');
             const placeTitle = nameParts[0];
