@@ -65,6 +65,7 @@ export default class PlacesAutocomplete {
 
         if (options.proximity) urlParams.set('proximity', options.proximity);
         if (options.featureTypes) urlParams.set('types', options.featureTypes);
+        if (options.bbox) urlParams.set('bbox', options.bbox);
 
         if (options.mapInstance) {
           const mapCenter = options.mapInstance.getCenter();
