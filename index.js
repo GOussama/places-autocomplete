@@ -58,7 +58,7 @@ export default class PlacesAutocomplete {
 
         const url = `${this.autocompleteUrl}/${encodeURIComponent(query)}.json`;
         const urlParams = new URLSearchParams({
-          limit: options.limit || 8,
+          limit: options.limit || 6,
           language: options.language || navigator.language,
           country: options.country || 'ma',
           access_token: options.mapboxToken,
@@ -68,14 +68,14 @@ export default class PlacesAutocomplete {
         if (options.featureTypes) urlParams.set('types', options.featureTypes);
         if (options.bbox) urlParams.set('bbox', options.bbox);
         if (options.country) urlParams.set('country', options.country);
-        console.log("---------------inside autocomplete -------------------------",options);
+
 
         if (options.mapInstance) {
           const mapCenter = options.mapInstance.getCenter();
           urlParams.set('proximity', mapCenter.toArray().join(','));
         }
 
-        fetch(`${url}?${urlParams}&country=ma`).then(response => response.json()).then(data => {
+        fetch(`${url}?${urlParams}`).then(response => response.json()).then(data => {
           const results = data.features.map(result => {
             const nameParts = result.place_name.split(',');
             const placeTitle = nameParts[0];
