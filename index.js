@@ -60,6 +60,7 @@ export default class PlacesAutocomplete {
         const urlParams = new URLSearchParams({
           limit: options.limit || 6,
           language: options.language || navigator.language,
+          country: options.country || 'ma',
           access_token: options.mapboxToken,
         });
 
@@ -67,6 +68,7 @@ export default class PlacesAutocomplete {
         if (options.featureTypes) urlParams.set('types', options.featureTypes);
         if (options.bbox) urlParams.set('bbox', options.bbox);
         if (options.country) urlParams.set('country', options.country);
+        console.log("---------------inside autocomplete -------------------------",options);
 
         if (options.mapInstance) {
           const mapCenter = options.mapInstance.getCenter();
