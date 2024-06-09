@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"No test specified\""
   },
-  "author": "Zoran Pesic",
-  "homepage": "https://github.com/zokioki/places-autocomplete",
-  "repository": "github:zokioki/places-autocomplete",
+  "author": "GHOUAGH Oussama ",
+  "homepage": "https://github.com/GOussama/places-autocomplete",
+  "repository": "github:GOussama/places-autocomplete",
   "license": "MIT",
   "dependencies": {
     "autocompleter": "^6.1.3"
