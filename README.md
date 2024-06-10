@@ -28,6 +28,7 @@ const mapboxglMap = new mapboxgl.Map({
 
 const autocomplete = new PlacesAutocomplete({
   mapboxToken: mapboxgl.accessToken,
+  country: 'ma',
   mapInstance: mapboxglMap,
   debounce: 300
 });
