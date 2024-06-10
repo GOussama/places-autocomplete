@@ -9,7 +9,7 @@ This library provides an autocomplete component for the [Mapbox Geocoding API](h
 Install the package:
 
 ```
-npm install --save places-autocomplete
+npm install --save @goussama/places-autocomplete
 ```
 
 Import and initialize the autocomplete:
