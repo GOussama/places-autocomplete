@@ -60,7 +60,6 @@ export default class PlacesAutocomplete {
         const urlParams = new URLSearchParams({
           limit: options.limit || 6,
           language: options.language || navigator.language,
-          country: options.country || 'ma',
           access_token: options.mapboxToken,
         });
 
