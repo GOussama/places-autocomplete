@@ -1,6 +1,6 @@
 {
   "name": "@goussama/places-autocomplete",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "An autocomplete component for the Mapbox Geocoding API.",
   "main": "index.js",
   "scripts": {
