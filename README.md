@@ -16,8 +16,8 @@ Import and initialize the autocomplete:
 
 ```javascript
 import mapboxgl from 'mapbox-gl';
-import PlacesAutocomplete from 'places-autocomplete';
-import 'places-autocomplete/index.css';
+import PlacesAutocomplete from '@goussama/places-autocomplete';
+import '@goussama/places-autocomplete/index.css';
 
 mapboxgl.accessToken = 'pk.abcd1234...';
 
@@ -61,7 +61,7 @@ The autocomplete can be configured with the following options upon initializatio
 | `onSelect`                 | Function called when autocomplete item is selected (args: [item]).         | -                |
 | `additionalResults`        | Function called before updating autocomplete results, should return array of results (args: [query]). | - |
 | `customize`                | Function called before rendering autocomplete results (args: [input, inputRect, container, maxHeight]). | - |
-| `country`                  | Specify the country you want result for . | - |
+| `country`                  | Specify the country to restrict the results to an area. | - |
 
 
 ### License
