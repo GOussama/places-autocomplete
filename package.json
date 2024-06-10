@@ -1,5 +1,5 @@
 {
-  "name": "places-autocomplete",
+  "name": "goussama-places-autocomplete",
   "version": "0.4.1",
   "description": "An autocomplete component for the Mapbox Geocoding API.",
   "main": "index.js",
@@ -15,6 +15,7 @@
   },
   "keywords": [
     "autocomplete",
+    "angular",
     "dropdown",
     "suggestions",
     "places",
