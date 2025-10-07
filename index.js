@@ -34,6 +34,13 @@ export default class PlacesAutocomplete {
     if (options.input) this.attachTo(options.input);
   }
 
+  normalizeAddress(value) {
+    return value
+      .replace('Sahara occidental', 'Maroc')
+      .replace('Western Sahara', 'Morocco')
+      .replace('الصحراء الغربية', 'المغرب');
+  }
+
   attachTo(input) {
     if (this.inputEl) return;
 
@@ -76,7 +83,8 @@ export default class PlacesAutocomplete {
 
         fetch(`${url}?${urlParams}`).then(response => response.json()).then(data => {
           const results = data.features.map(result => {
-            const nameParts = result.place_name.split(',');
+            const normalizedPlaceName = this.normalizeAddress(result.place_name);
+            const nameParts = normalizedPlaceName.split(',');
             const placeTitle = nameParts[0];
             const placeAddress = nameParts
               .splice(1, nameParts.length)
@@ -85,9 +93,9 @@ export default class PlacesAutocomplete {
             return {
               label: {
                 title: placeTitle,
-                address: placeAddress || '',
+                address: this.normalizeAddress(placeAddress || ''),
               },
-              value: result.place_name,
+              value: normalizedPlaceName,
               data: result,
             };
           });
